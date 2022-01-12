@@ -198,7 +198,7 @@ EPUBJS.Render.Iframe.prototype.setLeft = function(leftPos){
 	// this.docEl.style.marginLeft = -leftPos + "px";
 	// this.docEl.style[EPUBJS.Render.Iframe.transform] = 'translate('+ (-leftPos) + 'px, 0)';
 
-	if (this.isMobile) {
+	if (this.isMobile && leftPos!=0) {
 		this.docEl.style[this.transform] = 'translate('+ (-leftPos) + 'px, 0)';
 	} else {
 		this.document.defaultView.scrollTo(leftPos, 0);
